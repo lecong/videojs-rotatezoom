@@ -30,7 +30,8 @@ console.log('zoomrotate: Start');
   /**
     * register the zoomrotate plugin
     */
-    videojs.plugin('zoomrotate', function(settings){
+    var registerPlugin = videojs.registerPlugin || videojs.plugin;
+    registerPlugin('zoomrotate', function(settings) {
         if (defaults.debug) console.log('zoomrotate: Register init');
 
         var options, player, video, poster;
